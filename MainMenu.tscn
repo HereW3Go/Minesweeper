@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dsgvtjgd4mxev"]
+
+[ext_resource type="Script" uid="uid://dtgrffen1jyde" path="res://MainMenu.cs" id="1_i26rj"]
+
+[node name="MainMenu" type="Control" unique_id=527400338]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i26rj")
+
+[node name="BtnStartGame" type="Button" parent="." unique_id=2102665581]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 130.0
+offset_right = 694.00037
+offset_bottom = 197.00003
+theme_override_font_sizes/font_size = 43
+text = "Start a Game"
+
+[node name="PUMSelectDifficulty" type="PopupMenu" parent="." unique_id=1854355502]
+oversampling_override = 1.0
+title = "Select Difficulty"
+initial_position = 2
+size = Vector2i(440, 294)
+allow_search = false
+
+[node name="BtnStatistics" type="Button" parent="." unique_id=1506576964]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 359.0
+offset_right = 726.0
+offset_bottom = 426.00003
+theme_override_font_sizes/font_size = 43
+text = "Statistics Screen"
+
+[connection signal="pressed" from="BtnStartGame" to="." method="_OnBtnStartGamePressed"]
+[connection signal="id_pressed" from="PUMSelectDifficulty" to="." method="_OnPUMSelectDifficultyIDPressed"]
+[connection signal="pressed" from="BtnStatistics" to="." method="_OnBtnStatisticsPressed"]

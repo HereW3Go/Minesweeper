@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b0bo00la8x5qd"]
+
+[ext_resource type="Script" uid="uid://ce64el8m1kb11" path="res://StatisticsScreen.cs" id="1_l8j43"]
+
+[node name="StatisticsScreen" type="Control" unique_id=2134513068]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l8j43")
+
+[node name="BtnStatistics" type="Button" parent="." unique_id=1999782443]
+layout_mode = 0
+offset_left = 746.0
+offset_top = 581.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_font_sizes/font_size = 43
+text = "Back to Main Menu"
+
+[node name="LblStats" type="RichTextLabel" parent="." unique_id=1591692547]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 14
+
+[connection signal="pressed" from="BtnStatistics" to="." method="_OnBtnReturnToMainMenuPressed"]
